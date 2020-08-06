@@ -1,0 +1,59 @@
+@charset "UTF-8";
+/* Força dos seletores de tag 1°ID 2°CLASS */
+/* CSS - Cascading Style Sheets */
+
+:root{ 
+    /* Variáveis CSS */
+    --color-background: #F0F0F7;
+    --color-primary-lighter: #9871F5;
+    --color-primary-light: #916BEA;
+    --color-primary: #8257E5;
+    --color-primary-dark: #774DD6;
+    --color-primary-darker: #6842c2;
+    --color-secondary: #04D361;
+    --color-secondary-dark: #04BF58;
+    --color-title-in-primary: #FFFFFF;
+    --color-text-in-primary: #D4C2FF;
+    --color-text-title: #32264D;
+    --color-text-complement: #9C98A6;
+    --color-text-base: #6A6180;
+    --color-line-in-white: #E6E6F0;
+    --color-input-background: #F8F8FC;
+    --color-button-text: #FFFFFF;
+    --color-box-base: #FFFFFF;
+    --color-box-footer: #FAFAFC;
+    --color-small-info: #C1BCCC;
+
+    /* Tamanho da fonte padrão: 16px - 100% - 1rem - já o em usa o pai como referência*/
+    font-size: 60%; /* controle das unidades de medias rem */
+}
+
+* {
+    margin: 0; /* margem */
+    padding: 0; /* preenchimento */
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100vh; /* altura da visualização height viewport | ou seja 100 em baixo e 100 em cima*/ 
+}
+
+body {
+    background-color: var(--color-background); /* define a cor do fundo através da variável*/
+    display: flex; /* todos os elementos do body serão flexíveis colocando um ao lado do outro, diferente do block que coloca um em baixo do outro */
+    align-items: center; /* alinha os itens ao centro */
+    justify-content: center; /* justifica o conteúdo ao centro */ 
+}
+
+body, input, button, textarea {
+    /*font: 500 1.6rem Poppins; config de fonte de modo resumida*/
+    font-weight: 500; /* Grossura da fonte */
+    font-family: Poppins;
+    font-size: 1.6rem;
+    color: var(--color-text-base);
+}
+
+#container {
+    width: 90vw; /*width = largura | largura da visualização width viewport*/
+    max-width: 700px; /* valor máximo no desktop */
+}
