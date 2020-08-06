@@ -1,4 +1,4 @@
-# NWL-NextLevelWeek-Discovery
+# NLW-NextLevelWeek-Discovery
  Segunda edição do evento Next Level Week da Rocketseat
 
 
