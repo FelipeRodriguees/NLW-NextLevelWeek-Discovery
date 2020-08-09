@@ -1,0 +1,84 @@
+@charset "UTF-8";
+
+.page-header {
+    background-color: var(--color-primary);
+    display: flex; /*deixa as coisas alinhadas na horizontal */
+    flex-direction: column; /* determina a direção do flex para coluna */
+}
+
+.page-header .top-bar-container {
+    width: 90%; /* largura */
+    margin: 0 auto; /* espaçamento externo com 0px em cima e em baixo e nas laterais como automático */
+
+    display: flex; /*deixa as coisas alinhadas na horizontal */
+    align-items: center; /*alinha tudo ao centro*/
+    justify-content: space-between; /* cria um espaço entre eles*/
+    
+    padding: 1.6rem 0; /* preenchimento em cima e em baixo*/
+}
+
+.page-header .top-bar-container a{
+    height: 3.2rem; /* altura*/
+    transition: opacity 0.2s;
+}
+
+.page-header .top-bar-container a:hover{
+    opacity: 0.6;
+}
+
+.page-header .top-bar-container > img {
+    height: 1.6rem; /* altura*/
+}
+
+.page-header .header-content {
+    width: 90%; /* largura*/
+    margin: 3.2rem auto; /* espaçamento superior e inferior | lateral automática para alinhar os itens ao centro */
+    position: relative; /*  */
+}
+
+.page-header .header-content strong{
+    font-weight: 700; /* peso da fonte */
+    font-size: 3.6rem; /* tamanho da fonte */ 
+    font-family: Archivo;
+    line-height: 4.2rem; /* altura da linha do texto */
+    color: var(--color-title-in-primary);
+}
+
+.page-header .header-content p {
+    max-width: 30rem; /* largura maxíma */
+    font-size: 1.6rem; /* tamanho da fonte */
+    line-height: 2.6rem; /* altura da linha */
+    color: var(--color-text-in-primary);
+    margin-top: 2.4rem; /* margem superior */
+}
+
+@media (min-width: 700px){ /* quando for acima 700px */
+    .page-header {
+        height: 340px; /* altura */
+    }
+
+    .page-header .top-bar-container {
+        max-width: 1100px; /* largura */
+    }
+
+    .page-header .header-content { 
+        max-width: 740px; /* largura */
+
+        margin: 0 auto;
+
+        flex: 1 1; /* faz toda a caixa flex ser preenchida */
+        padding-bottom: 48px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+    }
+
+    .teacher-item header, .teacher-item footer {
+        padding: 32px; /* preenchimento nas laterais */
+    }
+
+    .page-header .header-content strong {
+        max-width: 350px; /* largura maxíma */
+    }
+}

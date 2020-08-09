@@ -1,0 +1,210 @@
+@charset "UTF-8";
+
+#page-study #container {
+    width: 100vw; /* todo o espaço visível será a largura do container */
+    height: 100vh; /* todo o espaço visível será a altura do container */
+}
+
+
+#search-teachers {
+    margin-top: 3.2rem; /* espaçamento superior externo*/
+}
+
+#search-teachers label {
+    color: var(--color-title-in-primary);
+}
+
+#search-teachers .select-block {
+    margin-bottom: 1.4rem; /* espaçamento inferior externo*/
+}
+
+#search-teachers button {
+    width: 100%; /* largura */
+    height: 5.5rem; /* altura 5.6 */
+    background: var(--color-secondary); 
+    color: var(--color-button-in-text); 
+    border: 0; /* tira a borda do botão */
+    border-radius: 0.8rem; /* arredonda a borda */
+    cursor: pointer; /* muda o cursor do mouse ao passar por cima */
+    font-weight: 700; /* peso da fonte */
+    font-size: 1.6rem;  /* tamanho da fonte */
+    font-family: Archivo; /* familia da fonte */ 
+    display: flex; /* permitir que o botão fique sempre alinhado ao meio | o flex permite usar as duas configurações seguintes */
+    align-items: center; 
+    justify-content: center; 
+    transition: background 0.2s; /* faz a transição  */
+    margin-top: 2.8rem; /* margem para separar do conteúdo superior */ /* 3.2*/
+}
+
+#search-teachers button:hover {
+    background-color: var(--color-secondary-dark);
+}
+
+#page-study main {
+    margin: 3.2rem auto; /* margem externa superior e inferior e laterais automáticas */
+    width: 90%; /* largura */
+}
+
+.teacher-item {
+    background-color: var(--color-box-base);
+    border: 1px solid var(--color-in-line-white); /* borda */
+    border-radius: 0.8rem; /* arredondamento da borda */
+    margin-top: 2.4rem; /* margem externa da parte superior entra cada bloco*/
+}
+
+.teacher-item header {
+    padding: 3.2rem 2rem; /*preenchimento vertical e horizontal*/
+    display: flex; /* permite alinhar os itens um ao lado do outro*/
+    align-items: center; /* alinha os itens ao centro */
+}
+
+.teacher-item header img {
+    width: 8rem; /* largura */
+    height: 8rem; /* altura */
+    border-radius: 50%; /* faz um bolinha com 50% por ser um quadrado perfeito*/
+}
+
+.teacher-item header div{
+    margin-left: 2.4rem; /* margem externa a esquerda */
+}
+
+.teacher-item header div strong{
+    font-weight: 700; /* peso da fonte */
+    font-size: 2.4rem; /* tamanho da fonte */
+    font-family: Archivo;
+    display: block; /* faz com que o elemento ocupe a linha toda */
+    color:  var(--color-text-title);
+}
+
+.teacher-item header div span {
+    font-size: 1.6rem; /* tamanho da fonte */
+    display: block; /* faz o item ocupar a linha toda e permite o usar o margin-top */
+    margin-top: 0.4rem; /* faz um distanciamento do nome do professor */
+}
+
+.teacher-item > p { /* > seleciona o primeiro nível*/
+    padding: 0 2rem; /* altura | largura de preenchimento */
+    font-size: 1.6rem;
+    line-height: 2.8rem; /* altura da linha do texto */
+}
+
+.teacher-item footer {
+    padding: 3.2rem 2rem; /* altura | largura de preenchimento */
+    background-color: var(--color-box-footer);
+    border-top: 1px solid var(--color-in-line-white); /* cria uma borda em cima do footer */
+    margin-top: 3.2rem; /* faz um distanciamento do texto */
+
+    display: flex; /* permite deixar os itens na mesma linha e libera o uso das configs abaixo*/
+    align-items: center; /* centraliza os itens na horizontal */ /* MAIS CORRETO DE SE EXPLICAR */
+    justify-content: space-between; /* coloca cada um em um canto*/
+}
+
+.teacher-item footer p {
+    font-size: 1.4rem; /* tamanho da fonte */
+    line-height: 2.4rem; /* controla a altura da linha */
+    color: var(--color-text-complement);
+}
+
+.teacher-item footer p strong {
+    font-size: 1.6rem; /* tamanho da fonte */
+    color: var(--color-primary);
+    display: block; /* adiciona uma quebra de linha para ficar mais bonito em mobile */
+}
+
+.teacher-item footer .button {
+    width: 20rem; /* largura */
+    height: 5.6rem; /* altura */
+    background: var(--color-secondary);
+    color: var(--color-button-text);
+    border: 0; /* retira a borda do button */
+    border-radius: 0.8rem; /* arredonda o button */
+    cursor: pointer; 
+    font-weight: 700; /* peso da fonte */
+    font-size: 1.4rem; /* tamanho da fonte */
+    font-family: Archivo; 
+
+    display: flex;
+    align-items: center; /* alinha os itens na horizontal */
+    justify-content: space-evenly; /* espaçamento constante entre os elementos */
+    
+    text-decoration: none;
+
+    transition: background 0.2s;
+    margin-left: 1.6rem; /* margem externa a esquerda */
+}
+
+.teacher-item footer .button:hover{
+    background: var(--color-secondary-dark);
+}
+
+@media (min-width: 700px){ /* quando for acima 700px */
+    #page-study #container{
+        max-width: 100vw; /* largura máxima */
+    }
+
+    .page-header {
+        height: 340px; /* altura */
+    }
+
+    .page-header .top-bar-container {
+        max-width: 1100px; /* largura */
+    }
+
+    .page-header .header-content { 
+        max-width: 740px; /* largura */
+
+        margin: 0 auto;
+
+        flex: 1 1; /* faz toda a caixa flex ser preenchida */
+        padding-bottom: 48px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+    }
+
+    .teacher-item header, .teacher-item footer {
+        padding: 32px; /* preenchimento nas laterais */
+    }
+
+    .page-header .header-content strong {
+        max-width: 350px; /* largura maxíma */
+    }
+
+    #search-teachers {
+        display: grid; /* seleciona o grid */
+        grid-template-columns: repeat(4, 1fr); /* cria 4 colunas iguais com a mesma medida */
+        gap: 16px; /* afastamento de 16px entre cada coluna */
+        position: absolute; /* sobrepõe a página toda*/
+        bottom: -28px;
+    }
+
+    #page-study main{
+        padding: 32px 0; /* preenchimento */
+        max-width: 740px; /* largura maxíma */
+        margin: 0 auto;
+    }
+
+    #search-teachers .select-block {
+        margin-bottom: 0;
+    }
+
+    .teacher-item  > p {
+        padding: 0 32px;
+    }
+
+    .teacher-item footer p strong{
+        display: initial;
+        margin-left: 16px;
+    }
+
+    .teacher-item footer button {
+        width: 245px;
+        font-size: 16px;
+        justify-content: center;
+    }
+
+    .teacher-item footer button img{
+        margin-right: 16px;
+    }
+}

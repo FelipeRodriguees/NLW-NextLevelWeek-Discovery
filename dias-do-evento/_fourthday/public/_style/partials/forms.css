@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+.select-block label, .input-block, .textarea-block label{
+    font-size: 1.4rem; /* tamanho da fonte */
+    color: var(--color-text-complement);
+}
+
+.input-block input, .select-block select, .textarea-block textarea {
+    width: 100%; /* largura */
+    height: 5.6rem; /* altura */
+    margin-top: 0.8rem; /* espaçamento exterior entre o label e o input */
+    border-radius: 0.8rem; /* deixa as bordas arredondadas*/
+    background-color: var(--color-input-background);
+    border: 1px solid var(--color-in-line-white); /* borda */
+    outline: 0; /* retira a cor forte da seleção */
+    padding: 0 1.6rem; /* preenchimento das laterais */
+    font-size: 1.6rem;  /* tamanho da fonte */
+    font-family: Archivo; 
+}
+
+.textarea-block textarea {
+    padding: 1.2rem 1.6rem; /* preenchimento interno*/
+    height: 16rem; /* altura */
+
+    resize: vertical; /* faz com que o usuário possa mover a caixa de texto apenas na vertical */
+}
+
+.input-block, .textarea-block{
+    position: relative; /* faz com que o absolute da line 114 fique relativo ao bloco */
+}
+
+.input-block:focus-within::after, .textarea-block:focus-within::after { /* q */
+    content: ""; /* conteúdo do elemento que será criado*/
+    width: calc(100% - 3.2rem); /* faz um calculo de largura onde será subtraído 3.2rem de 100% */
+    height: 2px; /* altura */
+    background: var(--color-primary-light); /* cor de fundo do elemento */
+
+    position: absolute; /* coloca acima de todo o conteúdo da página */
+    left: 1.6rem; /* definindo o posicionamento de inicio a esquerda */
+    bottom: 0; /* posiciona na parte de baixo do input */
+}
+
+label small {
+    font-size: 1.2rem;
+    padding-left: 1.2rem;
+    color: var(--colo-small-info);
+}
