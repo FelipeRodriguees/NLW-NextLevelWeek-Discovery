@@ -49,7 +49,7 @@
 }
 
 #page-give-classes fieldset legend button:hover {
-    /* transform: translateY(-5px); movimenta o objeto na vertical */
+    transform: translateY(-5px); /* movimenta o objeto na vertical */
     color: var(--color-primary-dark);
 }
 
@@ -93,6 +93,7 @@
 }
 
 #page-give-classes main footer button:hover {
+    transform: translateY(-5px);
     background: var(--color-secondary-dark);
 }
 

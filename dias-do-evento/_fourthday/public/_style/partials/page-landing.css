@@ -60,19 +60,23 @@
 }
 
 .buttons-container a.study { /* cor do botão */
+    transition: 0.2s;
     background: var(--color-primary-lighter);
 }
 
 .buttons-container a.study:hover{ /* só funciona quando o mouse estiver em cima */
+    transform: translateY(-5px);
     background: var(--color-primary-light);
 }
 
 .buttons-container a.give-classes { /* cor do botão */
+    transition: 0.2s;
     background: var(--color-secondary);
     margin-right: 0; /* margem a direita*/
 }
 
 .buttons-container a.give-classes:hover { /* só funciona quando o mouse estiver em cima */
+    transform: translateY(-5px);
     background: var(--color-secondary-dark);
 }
 

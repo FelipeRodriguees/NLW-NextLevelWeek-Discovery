@@ -61,15 +61,15 @@
                                 <label for="subject">Matéria</label>
                                 <select name="subject" id="subject" required>
                                     <option value="">Selecione uma opção</option>
-                                        {% for subject in subjects %}
-                                            <option value="{{loop.index}}"> {{subject}}</option>
-                                        {%endfor%}
+                                    {%for subject in subjects %}
+                                        <option value="{{loop.index}}"> {{subject}} </option>
+                                    {%endfor%}
                                 </select>
                             </div>
 
                             <div class="input-block">
                                 <label for="cost">Custo da sua hora/aula <small>(R$)</small></label>
-                                <input name="cost" type="cost" id="cost" type="number" required>
+                                <input  name="cost"  type="cost" id="cost" type="number" required>
                             </div>
                     </fieldset>
 
@@ -83,10 +83,9 @@
                             <div class="select-block">
                                 <label for="weekday">Dia da semana</label>
                                 <select name="weekday[]" required> <!-- o [] significa que ele pode ter mais de um valor -->
-                                    <option value="">Selecione uma opção</option>
-                                    {% for weekday in weekdays %}
-                                    <option value="{{loop.index0}}" > {{weekday}}</option>
-                                {%endfor%}
+                                    {%for weekday in weekdays %}
+                                        <option value="{{loop.index0}}"> {{weekday}} </option>
+                                    {%endfor%}
                                 </select> 
                                 
                             </div>

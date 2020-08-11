@@ -126,7 +126,7 @@
     display: flex;
     align-items: center; /* alinha os itens na horizontal */
     justify-content: space-evenly; /* espaçamento constante entre os elementos */
-    
+
     text-decoration: none;
 
     transition: background 0.2s;
@@ -134,6 +134,7 @@
 }
 
 .teacher-item footer .button:hover{
+    transform: translateY(-5px);
     background: var(--color-secondary-dark);
 }
 
@@ -207,4 +208,5 @@
     .teacher-item footer button img{
         margin-right: 16px;
     }
+
 }

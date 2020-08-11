@@ -43,5 +43,5 @@
 label small {
     font-size: 1.2rem;
     padding-left: 1.2rem;
-    color: var(--colo-small-info);
+    color: var(--color-small-info);
 }

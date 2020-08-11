@@ -49,7 +49,7 @@ body, input, button, textarea {
     /*font: 500 1.6rem Poppins; config de fonte de modo resumida*/
     font-weight: 500; /* Grossura da fonte */
     font-family: Poppins;
-    font-size: 1.6rem;
+    /*font-size: 1.6rem; ESTAVA DANDO PROBLEMAS NO ALINHAMENTO DA DIV DOS HORÁRIOS NA PAGE-STUDY  */
     color: var(--color-text-base);
 }
 
