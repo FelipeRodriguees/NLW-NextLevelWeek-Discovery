@@ -1,0 +1,141 @@
+@charset "UTF-8";
+
+#page-landing {
+    background-color: var(--color-primary);
+}
+
+#container {
+    color: var(--color-text-in-primary);
+}
+
+.logo-container img{
+    height: 10rem; /*altura*/
+}
+
+.logo-container {
+    text-align: center; /*alinha o texto ao centro de onde esta*/
+    margin-bottom: 3.2rem; /*margem a baixo da logo container*/
+}
+
+.logo-container h2{
+    font-weight: 500; /*leveza/grossura da fonte*/
+    font-size: 3.6rem; /*tamanho da fonte*/
+    line-height: 4.6rem; /*altura da linha do texto*/
+    margin-top: 0.8rem; /*espaçamento superior*/
+}
+
+.hero-image {
+    width: 100%; /*dentro da div container, assim herdando a largura da div*/
+}
+
+.buttons-container {
+    display: flex; /* elementos um ao lado do outro*/
+    justify-content: center; /* centraliza o conteúdo | só funciona com o display: flex*/
+    margin: 3.2rem 0; /* espaçamento na margem cima, baixo e laterais  */
+}
+
+.buttons-container a {
+    width: 30rem; /* largura */
+    height: 10.4rem; /*altura*/
+    /*border-radius: 1rem 1rem 1rem 1rem; em sentido horário*/
+    border-radius: 0.8rem; /* arredonda as bordas | DESAFIO COLOCAR ARREDONDAMENTO EM APENAS UM CANTO */
+    margin-right: 1.6rem; /* margem a direita*/
+
+    font-weight: 700; /* grossura da fonte */
+    font-size: 2.4rem; /* tamanho da fonte */
+    font-family: Archivo;
+
+    display: flex; /* possibilita mover a palavra estudar ao lado da img*/
+    align-items: center; /* alinha as palavras ao centro*/
+    justify-content: center; /* deixa os itens ao meio da caixa*/
+    text-decoration: none; /* retira o sublinhado do link */
+
+    color: var(--color-button-text); /* muda a cor da letra */
+    transition: background 0.2s; /* tempo da transição do background */
+}
+
+.buttons-container a img {
+    width: 4rem; /* largura da img*/
+    margin-right: 2.4rem; /*margem a direita da img, deslocando a escrita para o lado */
+}
+
+.buttons-container a.study { /* cor do botão */
+    transition: 0.2s;
+    background: var(--color-primary-lighter);
+}
+
+.buttons-container a.study:hover{ /* só funciona quando o mouse estiver em cima */
+    transform: translateY(-5px);
+    background: var(--color-primary-light);
+}
+
+.buttons-container a.give-classes { /* cor do botão */
+    transition: 0.2s;
+    background: var(--color-secondary);
+    margin-right: 0; /* margem a direita*/
+}
+
+.buttons-container a.give-classes:hover { /* só funciona quando o mouse estiver em cima */
+    transform: translateY(-5px);
+    background: var(--color-secondary-dark);
+}
+
+.total-connections {
+    font-size: 1.8rem; /* tamanho da fonte */
+    display: flex; /* para pode alinhar os objetos, img e texto*/ 
+    align-items: center; /* alinha ao centro da linha horizontal */
+    justify-content: center; /* centraliza ao meio da tela */
+}
+
+.total-connections img {
+    margin-left: 0.8rem; /* afasta o coração para a direita*/
+}
+
+@media (max-width: 699px){ /* se a largura máxima for de 699px vai aplicar as configurações de font */
+    :root { /* fonte base para o rem para a page | importante para o mobile */
+        font-size: 40%;
+    }    
+}
+
+@media (min-width: 1100px){ /* Se a largura minima for de 1100px pra mais aplicara essas formas*/
+    #page-landing #container{
+        max-width: 1100px; /* largura máxima | não pode passar dessa largura */
+        display: grid; /* determina o uso do grid */
+        grid-template-columns: 2fr 1fr 2fr; /* determina o tamanho das colunas de forma igualitária com o uso da media fr(fração) | podemos determinar o tamanho com outras formas de medida*/
+        grid-template-rows: 350px 1fr; /* determina um valor fixo de 350px para a primeira linha e 1fração para a segunda linha */
+        grid-template-areas:  /* define as areas do grid */
+        "proffy image image"
+        "button button  texting";
+        /*gap: 60px;  cria um distanciamento de 60px entre cada grid */
+        column-gap: 87px;
+        row-gap: 86px;
+    }
+
+    .logo-container { /* aloca os conteúdos no local */
+        grid-area: proffy;
+        text-align: initial; /* coloca o texto na sua posição inicial */
+        align-self: center; /* alinha o conteúdo que está ao no grid ao centro do mesmo */
+        margin: 0; /* atribui o valor 0 para a margem */
+    }
+
+    .logo-container img {
+        height: 127px; /* altura da logo*/
+    }
+
+    .hero-image { /* aloca os conteúdos no local */
+        grid-area: image;
+        height: 350px; /* altura da imagem */
+    }
+
+    .buttons-container{ /* aloca os conteúdos no local */
+        grid-area: button;
+        justify-content: flex-start; /* sobre escreve o justify-content:  line 36 | assim o tira do alinhamento ao centro e coloca no inicio */
+        margin: 0;
+    }
+
+    .total-connections { /* aloca os conteúdos no local */
+        grid-area: texting;
+        justify-self: end; /* alinha ao final do grid*/
+        font-size: 1.2rem; /* tamanho da fonte */
+    }
+}
